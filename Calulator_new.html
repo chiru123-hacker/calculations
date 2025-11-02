@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script> 
+    var val='';
+    function myclick(a)
+    {
+        document.getElementById("t1").value+=a;
+    }
+    function operationclick(n)
+    {
+        val+=document.getElementById("t1").value;
+        val+=n;
+        document.getElementById("t1").value="";
+    }
+    function equalclick(n)
+    {
+        val+=document.getElementById("t1").value;
+        // alert(val)
+           document.getElementById("t1").value=eval(val);
+           
+    }
+    function reset123()
+    {
+        val="";
+        document.getElementById("t1").value="";
+    }
+    
+    </script>
+</head>
+<body>
+   
+    <input type="text" id="t1" value=""  size="15";> <br>
+    <input type="button" value="1" onclick="myclick('1');">
+    <input type="button" value="2" onclick="myclick('2');">
+    <input type="button" value="3" onclick="myclick('3');">
+    <input type="button" value="-" onclick="operationclick('-');"><br>
+    <input type="button" value="4" onclick="myclick('4');">
+    <input type="button" value="5" onclick="myclick('5');">
+    <input type="button" value="6" onclick="myclick('6');">
+    <input type="button" value="+" onclick="operationclick('+');"><br>
+    <input type="button" value="7" onclick="myclick('7');">
+    <input type="button" value="8" onclick="myclick('8');">
+    <input type="button" value="9" onclick="myclick('9');">
+    <input type="button" value="/" onclick="operationclick('/');"><br>
+    <input type="button" value="c" onclick="reset123('c');">
+    <input type="button" value="0" onclick="myclick('0');">
+    <input type="button" value="*" onclick="operationclick('*');">
+    <input type="button" value="=" onclick="equalclick('=');">
+   
+</body>
+</html>
